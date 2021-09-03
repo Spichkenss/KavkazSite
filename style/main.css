@@ -1,0 +1,264 @@
+@font-face {
+	font-family: "Beryozki";
+	src: url("../fonts/Beryozki.ttf");
+}
+
+::-webkit-scrollbar {
+	width: 10px;
+}
+
+::-webkit-scrollbar-button {
+	background: #222; 
+}
+
+::-webkit-scrollbar-thumb {
+	background: #333; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: #666; 
+}
+
+::-webkit-scrollbar-track {
+	background: #000; 
+}
+
+::-webkit-scrollbar-track-piece {
+	background: #000; 
+}
+
+::-webkit-scrollbar-corner {
+	background: #999; 
+}
+
+
+::-webkit-resizer {
+	background: #111; 
+}
+
+
+*,*:before,*:after{
+	padding: 0;
+	margin: 0;
+	border: 0;
+	box-sizing: border-box;
+}
+
+html, body {
+	height: 100%;
+	overflow-x: hidden;
+	scroll-behavior: smooth;
+}
+
+body{
+	font-family: 
+}
+
+
+.page {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+}
+
+/*parallax*/
+
+.parallax {
+	position: relative;
+	height: 100%;
+}
+
+.parallax_montain {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+}
+
+.parallax_montain_1 {
+	background: url(../pic/parx1.png) 0 0 / cover no-repeat ;
+}
+
+.parallax_montain_2 {
+	background: url(../pic/parx2.png) right bottom / 45% no-repeat ;
+	z-index: 1;
+}
+
+.parallax_montain_3 {
+	background: url(../pic/parx3.png) left bottom / 100% no-repeat ;
+	z-index: 1;
+}
+
+.fog {
+	background: url(../pic/fog_1.png) bottom / 100% no-repeat;
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	z-index: 2;
+}
+
+/*content*/
+
+.content {
+	position: relative;
+}
+
+.content_body {
+	max-width: 1070px;
+	margin: 0px auto;
+}
+
+.content_header{
+	text-align: center;
+	text-transform: uppercase;
+	margin-bottom: 20px;
+	padding: 0px 20px;
+	font-size: 100px;
+	font-family: Beryozki;
+}
+
+.content_text p {
+	text-align: center;
+	text-transform: uppercase;
+	margin-bottom: 20px;
+	padding: 0px 20px;
+	font-size: 20px;
+  font-family: 'Marmelad', sans-serif;
+}
+
+.content_text h1 {
+	margin-top: 100px;
+	text-align: center;
+	text-transform: uppercase;
+	margin-bottom: 20px;
+	padding: 0px 20px;
+	font-size: 100px;
+	font-family: Beryozki;
+}
+
+/*content img*/
+
+.content_img img {
+	max-width: 70%;
+	display: block;
+	margin: 20px auto;
+	-webkit-box-shadow: 0px 0px 50px 5px rgba(0, 0, 0, 1);
+	-moz-box-shadow: 0px 0px 50px 5px rgba(0, 0, 0, 1);
+	box-shadow: 0px 0px 50px 5px rgba(0, 0, 0, 1);
+}			
+
+
+						/*button home*/
+
+a {
+	position: fixed;
+	overflow: hidden;
+	right: 10px;
+	top: 90%;
+	width: 200px;
+	text-align: center;	
+	color: #fff;
+	font-size: 47px;
+	text-decoration: none;
+	font-family: Beryozki;
+	z-index: 150;
+	letter-spacing: 2px;
+	text-transform:uppercase;
+	transition: 0.5s;
+}
+
+a:hover{
+	background: #fff;
+	color: black;
+	box-shadow: 0 0 5px #fff,
+							0 0 25px #fff,
+							0 0 50px #fff,
+							0 0 200px #fff;
+}
+
+a span {
+	position: absolute;
+	display: block;
+}
+
+a span:nth-child(1) {
+	top: 0;
+	left: -100%;
+	width: 100%;
+	height: 2px;
+	background: linear-gradient(90deg, transparent, #fff);
+	animation: animate1 1s linear infinite;
+}
+@keyframes animate1 {
+	0% {
+		left: -100%;
+	}
+	50%,100% {
+		left: 100%;		
+	}
+}
+
+a span:nth-child(2) {
+	top: -100%;
+	right: 0;  
+	width: 2px;
+	height: 100%;
+	background: linear-gradient(180deg, transparent, #fff);
+	animation: animate2 1s linear infinite;
+	animation-delay: 0.25s; 
+}
+@keyframes animate2 {
+	0% {
+		top: -100%;
+	}
+	50%,100% {
+		top: 100%;		
+	}
+}
+
+a span:nth-child(3) {
+	bottom: 0;
+	right: -100%;  
+	width: 100%;
+	height: 2px;
+	background: linear-gradient(270deg, transparent, #fff);
+	animation: animate3 1s linear infinite;
+	animation-delay: 0.5s; 
+}
+@keyframes animate3 {
+	0% {
+		right: -100%;
+	}
+	50%,100% {
+		right: 100%;		
+	}
+}
+
+a span:nth-child(4) {
+	bottom: -100%;
+	left: 0;  
+	width: 2px;
+	height: 100%;
+	background: linear-gradient(270deg, transparent, #fff);
+	animation: animate4 1s linear infinite;
+	animation-delay: 0.75s; 
+}
+@keyframes animate4 {
+	0% {
+		bottom: -100%;
+	}
+	50%,100% {
+		bottom: 100%;		
+	}
+}
+
+
+		
+
+
+
